@@ -17,8 +17,7 @@ while true; do
 		echo $TXT
 
 		## YOUR COMMAND HERE
-		# pkill -9 -f next
-		# pkill -9 -f python
+		# pkill -9 -f python -u $USER
 		##
 
 		echo $(pre) creating $FILE
