@@ -5,5 +5,4 @@ chmod 777 $BASE
 FILE=$BASE/file_$(hostname)
 
 nohup ./killfile.sh $FILE > $OUT &
-echo $NAME
-echo $FILE
+echo $(realpath $FILE)
