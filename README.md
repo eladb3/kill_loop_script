@@ -1,6 +1,6 @@
 # kill_loop_script
 
-This program will print a file path on the beginning and will start an infinite loop, if the file is not there it will kill all your python process on the machine and will recreate this file.
+This program will print a file path on the beginning and will start an infinite loop, if the file is not there it will kill all your python processes  on the machine (or anything else you want to do, see stage 1 in the run instructions) and will recreate this file.
 
 Run instructions:
 
