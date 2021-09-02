@@ -16,8 +16,9 @@ while true; do
 		TXT="$(pre) $FILE deleted!"
 		echo $TXT
 
-		## YOUR COMMAND HERE
-		# pkill -9 -f python -u $USER
+		pkill -9 -f python -u $USER
+		## PLEASE ADD ADDITIONAL COMMANDS HERE
+
 		##
 
 		echo $(pre) creating $FILE
