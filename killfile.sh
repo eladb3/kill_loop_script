@@ -1,3 +1,11 @@
+gpu_clean_all () {
+        GPU_PROC=$(nvidia-smi -q -d PIDS | grep -P "Process ID +: [0-9]+" | grep -Po "[0-9]+")
+        for PID in $GPU_PROC; do
+                [ $(ps -o uname= -p "${PID}") = "$USER" ] && kill -9 ${PID}
+        done
+}
+
+
 FILE=$1
 
 create () {
@@ -16,7 +24,8 @@ while true; do
 		TXT="$(pre) $FILE deleted!"
 		echo $TXT
 
-		pkill -9 -f python -u $USER
+		pkill -9 -f python -u $USER # kill all python processes
+		gpu_clean_all # clean all gpu memory consuming processes
 		## PLEASE ADD ADDITIONAL COMMANDS HERE
 
 		##
